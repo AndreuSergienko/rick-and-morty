@@ -1,0 +1,7 @@
+.cardsLayout {
+   display: grid;
+   grid-template-columns: repeat(4, 1fr);
+   grid-column-gap: 20px;
+   grid-row-gap: 70px;
+   grid-auto-rows: max-content;
+}
