@@ -1,0 +1,78 @@
+.modalCanvas {
+   position: fixed;
+   width: 100%;
+   height: 100vh;
+   top: 0;
+   left: 0;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   background: rgba(0, 0, 0, 0.5);
+   z-index: 100;
+}
+
+.modal {
+   min-height: 300px;
+   max-width: 600px;
+   width: 100%;
+   border-radius: 15px;
+   background: #fff;
+   display: flex;
+   align-items: flex-start;
+   overflow: hidden;
+   padding: 1px;
+
+}
+
+.modalImage,
+.modalInfo {
+   flex: 0 1 50%;
+}
+
+.modalImage {
+   height: 100%;
+   position: relative;
+}
+
+.modalImage::after {
+   content: '';
+   position: absolute;
+   height: 100%;
+   width: 0px;
+   background: rgba(255, 255, 255, 1);
+   box-shadow: 31px 0 69px 65px #fff;
+   top: 0;
+   right: 40px;
+}
+
+.modalImage img {
+   display: block;
+   height: 100%;
+}
+
+.modalInfo {
+   display: grid;
+   grid-template-columns: repeat(2, max-content);
+   grid-column-gap: 30px;
+   grid-row-gap: 10px;
+   padding-top: 20px;
+   padding-left: 55px;
+}
+
+.modalInfoItem {
+   display: flex;
+   flex-direction: column;
+   gap: 7px;
+}
+
+.modalInfoParam {
+   font-weight: 600;
+   text-transform: capitalize;
+}
+
+.modalInfoValue {
+   text-overflow: ellipsis;
+   white-space: nowrap;
+   overflow: hidden;
+   max-width: 110px;
+}
