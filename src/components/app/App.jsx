@@ -1,5 +1,5 @@
 import { useSelector } from 'react-redux';
-import { Layout, Cards, InfoModal, Spinner } from '..';
+import { Layout, Cards, InfoModal, Spinner, SwitchLoadingButton } from '..';
 import './App.css';
 
 export const App = () => {
@@ -8,6 +8,7 @@ export const App = () => {
 	return (
 		<div className='app'>
 			<Layout>
+				<SwitchLoadingButton />
 				<Cards />
 				<InfoModal />
 				{isLoading && <Spinner />}
