@@ -1,14 +1,17 @@
 import { ACTIONS } from '../../constants';
 
 const initialState = {
-	allCharacters: null,
+	allCharacters: [],
 	currentCharacter: null,
 };
 
 export const characters = (state = initialState, action) => {
 	switch (action.type) {
 		case ACTIONS.setCharacters:
-			return { ...state, allCharacters: action.payload };
+			return {
+				...state,
+				allCharacters: [...state.allCharacters, ...action.payload],
+			};
 		case ACTIONS.setCurrentCharacter:
 			return { ...state, currentCharacter: action.payload };
 		default:
