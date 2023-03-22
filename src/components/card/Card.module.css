@@ -26,3 +26,14 @@
    font-size: 18px;
    text-align: center;
 }
+
+
+@media (max-width:375px) {
+   .card {
+      width: 100%;
+   }
+
+   .cardImage {
+      max-width: 200px;
+   }
+}
