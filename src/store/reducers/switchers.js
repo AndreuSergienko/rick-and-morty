@@ -1,22 +1,22 @@
 import { ACTIONS } from '../../constants';
 
 const initialState = {
-	isDataLoading: true,
+  canDataLoad: true,
 };
 
 export const switchers = (state = initialState, action) => {
-	switch (action.type) {
-		case ACTIONS.toggleDataLoading:
-			return {
-				...state,
-				isDataLoading: action.payload,
-			};
-		default:
-			return state;
-	}
+  switch (action.type) {
+    case ACTIONS.toggleCanDataLoad:
+      return {
+        ...state,
+        canDataLoad: action.payload,
+      };
+    default:
+      return state;
+  }
 };
 
-export const toggleDataLoadingAC = (payload) => ({
-	type: ACTIONS.toggleDataLoading,
-	payload,
+export const toggleCanDataLoadAC = (payload) => ({
+  type: ACTIONS.toggleCanDataLoad,
+  payload,
 });

@@ -1,1 +1,1 @@
-export { ApiService } from './ApiService';
+export { apiService } from './ApiService';
